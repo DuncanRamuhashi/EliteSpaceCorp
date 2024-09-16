@@ -87,7 +87,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white p-6 text-center">
+      <footer className="bg-gray-900  text-white p-6 text-center">
         <p>© 2024. Powered by Duncan Ramuhashi</p>
       </footer>
     </div>

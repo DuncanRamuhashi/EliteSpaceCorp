@@ -32,7 +32,7 @@ function App() {
           <h1 className="text-3xl font-bold">Izinja</h1>
           <ul className="flex space-x-6">
             <li><a href="#about" className="hover:text-gray-300">About</a></li>
-            <li><a href="#services" className="hover:text-gray-300">Services</a></li>
+            
             <li><a href="#media" className="hover:text-gray-300">Media</a></li>
             <li><a href="#contact" className="hover:text-gray-300">Contact</a></li>
           </ul>
@@ -40,7 +40,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen bg-gradient-to-r from-blue-600 to-indigo-600 flex flex-col justify-center items-center text-center p-10 pt-28">
+      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 flex flex-col justify-center items-center text-center p-10 pt-28">
         <h1 className="text-5xl font-bold text-white mb-4">Welcome to Izinja</h1>
         <p className="text-lg text-white mb-8">A world of random dog media, powered by Duncan Ramuhashi.</p>
         <a href='#media'>
@@ -50,7 +50,7 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="min-h-screen flex flex-col justify-center items-center text-center p-10 bg-gray-100">
+      <section id="about" className="flex flex-col justify-center items-center text-center p-10 bg-gray-100">
         <h2 className="text-4xl font-bold mb-4">About Izinja</h2>
         <p className="text-lg max-w-2xl">Izinja showcases random dog images and videos. Whether you love dogs or just want to smile, Izinja is here for you!</p>
       </section>
@@ -78,7 +78,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="min-h-screen bg-blue-600 text-white flex flex-col justify-center items-center text-center p-10">
+      <section id="contact" className=" bg-blue-600 text-white flex flex-col justify-center items-center text-center p-10">
         <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
         <p className="text-lg max-w-2xl mb-8">Reach out to us for more dog content or any inquiries!</p>
         <a href='https://www.petsplace.co.za/puppies.php' target="_blank" rel="noopener noreferrer">

@@ -3,23 +3,52 @@ import React, { useEffect, useState } from 'react';
 function App() {
   const [mediaUrl, setMediaUrl] = useState(null);
   const [isVideo, setIsVideo] = useState(false);
+  const [joke, setJoke] = useState(null); // State to hold a single joke
+  const [loadingJokes, setLoadingJokes] = useState(true); // State to track if jokes are loading
 
+  // Fetch random dog media (image or video)
   const fetchDog = async () => {
     try {
       const response = await fetch('https://random.dog/woof.json');
       const data = await response.json();
+
       const videoExtensions = ['mp4', 'webm'];
       const url = data.url;
       const fileExtension = url.split('.').pop();
       setIsVideo(videoExtensions.includes(fileExtension));
       setMediaUrl(url);
+      fetchJokes();
     } catch (error) {
-      console.error('Error fetching media:', error);
+      console.error('Error fetching dog media:', error);
     }
   };
 
+  // Fetch random joke
+ 
+  const fetchJokes = async () => {  // Specify that this is a void function by using `: void`
+    setLoadingJokes(true); // Start loading the joke when the button is clicked
+    try {
+      const response = await fetch('https://official-joke-api.appspot.com/random_joke', {
+        method: 'GET',
+      });
+  
+      if (response.ok) {
+        const data = await response.json();
+        setJoke(data); // Set the joke to the state (single joke object)
+        setLoadingJokes(false); // Stop loading once the joke is set
+      } else {
+        throw new Error('Failed to fetch joke');
+      }
+    } catch (error) {
+      console.error('Error fetching joke:', error);
+      setLoadingJokes(false); // Stop loading if there's an error
+    }
+  };
+  
+  // Use effect to fetch dog media when the component mounts
   useEffect(() => {
     fetchDog();
+
   }, []);
 
   return (
@@ -62,9 +91,21 @@ function App() {
           ) : (
             <p className="text-lg">Loading media...</p>
           )}
+           {loadingJokes ? (
+          <div className="animate-spin border-t-4 border-blue-600 w-12 h-12 rounded-full mb-4"></div>
+        ) : (
+          joke && (
+            <div className="py-5 bg-white p-6 rounded-lg shadow-lg">
+              <p className="text-lg">{joke.setup}</p>
+              <p className="text-lg font-semibold mt-2">{joke.punchline}</p>
+            </div>
+          )
+        )}
           <button onClick={fetchDog} className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-transform transform hover:scale-105">Next</button>
         </div>
       </section>
+
+
 
       {/* About Section */}
       <section id="about" className="flex flex-col justify-center items-center text-center p-10 bg-gray-100">

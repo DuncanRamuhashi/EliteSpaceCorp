@@ -111,7 +111,7 @@ function App() {
       <section id="contact" className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white flex flex-col justify-center items-center text-center p-10">
         <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
         <p className="text-lg max-w-2xl mb-8">Reach out to us for more dog content or any inquiries!</p>
-        <a href='https://www.petsplace.co.za/puppies.php' target="_blank" rel="noopener noreferrer">
+        <a href='https://dogtownsa.org/pet-category/up-for-adoption/?gad_source=1&gclid=CjwKCAiA7Y28BhAnEiwAAdOJUO1hxwad_LljbcuW5pAX_p6MQhikSECLXJNC3EyP4USiaBmUllWhCRoCHoUQAvD_BwE' target="_blank" rel="noopener noreferrer">
           <button className="bg-gray-900 text-pink-400 px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition-transform transform hover:scale-105">Contact Me</button>
         </a>
       </section>

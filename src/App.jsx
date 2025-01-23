@@ -48,7 +48,7 @@ function App() {
   return (
     <div className="font-sans bg-gradient-to-b from-gray-900 via-gray-800 to-black text-gray-200 min-h-screen">
       {/* Navbar */}
-      <nav className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 fixed w-full top-0 left-0 shadow-lg z-50">
+      <nav className="bg-gradient-to-r  to-indigo-500 fixed w-full top-0 left-0 shadow-lg z-50">
         <div className="container mx-auto flex justify-between items-center p-4">
           <h1 className="text-3xl font-extrabold text-white">Izinja</h1>
           <ul className="flex space-x-6">
@@ -108,7 +108,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white flex flex-col justify-center items-center text-center p-10">
+      <section id="contact" className="bg-gradient-to-r  from-gray-900 via-gray-800 to-black  text-white flex flex-col justify-center items-center text-center p-10">
         <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
         <p className="text-lg max-w-2xl mb-8">Reach out to us for more dog content or any inquiries!</p>
         <a href='https://dogtownsa.org/pet-category/up-for-adoption/?gad_source=1&gclid=CjwKCAiA7Y28BhAnEiwAAdOJUO1hxwad_LljbcuW5pAX_p6MQhikSECLXJNC3EyP4USiaBmUllWhCRoCHoUQAvD_BwE' target="_blank" rel="noopener noreferrer">
@@ -117,8 +117,8 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 p-6 text-center">
-        <p>© 2024. Powered by Elite Dogs </p>
+      <footer className="bg-gradient-to-b from-gray-900 via-gray-800 to-black  text-gray-400 p-6 text-center">
+        <p>© {new Date().getFullYear()}. Powered by Elite Dogs </p>
       </footer>
     </div>
   );
